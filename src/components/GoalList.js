@@ -6,10 +6,13 @@ const GoalList = props => {
   console.log("prop received")
 
   // JSX
-  return( 
-    <ul className="goal-list">
+  return (
+    <ul className="goal-list"> 
+     {props.goals.map((goal) => {
+        return <li>{goal.text}</li>;
+      })}
     </ul>
-  )
+  );
 };
 
 export default GoalList; 
