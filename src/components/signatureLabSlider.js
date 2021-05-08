@@ -15,7 +15,7 @@ const fadeIn = keyframes`
 
 const SlideContainer = styled(Box)`
   overflow: hidden;
-  margin: 10px 0;
+  margin: 20px 0;
   opacity: 0;
   transform: translateX(100vw);
   animation: ${fadeIn} 800ms ${easing.bezier} 1000ms forwards;
@@ -34,12 +34,6 @@ const MainSlider = ({ children }) => (
     <Slider {...settings}>{children}
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-      <div> 
-        <img src='http://placekitten.com/g/400/202' />
-      </div>
-      <div> 
-        <img src='http://placekitten.com/g/400/202' />
-      </div>
     </Slider>
   </SlideContainer>
 )
