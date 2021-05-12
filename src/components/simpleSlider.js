@@ -1,20 +1,69 @@
 import React from 'react';
 import Slider from 'react-slick';
 import '../styling/simpleSlider.css';
+import { Box } from 'rebass';
+import styled, { keyframes } from 'styled-components';
 
 function SimpleSlider() {
+  const easing = {
+    hover: 'all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s',
+    default: '0.3s ease-in 0s',
+    bezier: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+  }
+  
+  const fadeIn = keyframes`
+    from { opacity: 0;transform:translateX(100vw)}
+    to { opacity: 1;transform:translateX(0)}
+  `
+
+    const SlideContainer = styled(Box)`
+    overflow: visible;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateX(100vw);
+    animation: ${fadeIn} 800ms ${easing.bezier} 1000ms forwards;
+    width: 70%;
+    min-height: 200px;
+    background: black;
+  `
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+
     const settings = {
     dots: true,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />
   };
   return (
     <div class="container">
         <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       <h2> Single Item</h2>
+      <SlideContainer>
       <Slider {...settings}>
         <div>
           <img src='http://placekitten.com/g/400/202' />
@@ -26,6 +75,7 @@ function SimpleSlider() {
           <img src='http://placekitten.com/g/400/203' />
         </div>
       </Slider>
+    </SlideContainer>
     </div>
    );
  };

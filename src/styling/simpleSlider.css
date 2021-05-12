@@ -28,6 +28,15 @@ p {
   text-align: center;
 }
 
+.slick-prev:before {
+  color: black !important;
+  background-color: #eee;
+}
+.slick-next:before {
+  color: black !important;
+  background-color: #eee;
+}
+
 
 
 

@@ -37,6 +37,4 @@ class Example2 extends React.Component {
   }
 }
 
-
-
 export default Example2;
