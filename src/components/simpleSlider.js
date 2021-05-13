@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import '../styling/simpleSlider.css';
 import { Box } from 'rebass';
 import styled, { keyframes } from 'styled-components';
+import { FaBeer } from 'react-icons/fa'
 
 function SimpleSlider() {
   const easing = {
@@ -18,7 +19,7 @@ function SimpleSlider() {
 
     const SlideContainer = styled(Box)`
     overflow: visible;
-    margin: 20px 0;
+    margin: 20px 180px;
     opacity: 0;
     transform: translateX(100vw);
     animation: ${fadeIn} 800ms ${easing.bezier} 1000ms forwards;
@@ -49,14 +50,49 @@ function SimpleSlider() {
     );
   }
 
+  class LeftNavButton extends React.Component {
+    render() {
+      return <button {...this.props} style={{fontSize: "40px", display: 'block', right:"40px", zIndex:"15", height:"40px", width:"40px", opacity:"1", color:"white"}}>
+        <span>  <FaBeer /> </span>
+        </button>;
+     }
+  }
+
+  function RightNavButton(props) {
+    const {className, style, onClick} = props
+    return (
+        <div
+            className="slick-arrow"
+            style={{...style, display: 'block'}}
+            onClick={onClick}
+        >
+            <p> next</p> 
+        </div>
+    );
+}
+
+const PrevArrow = (props) => {
+  const { className, onClick } = props
+  return (
+      <div 
+        className={className}
+        onClick={onClick}
+      >
+        <FaBeer size={30} color="#FFF" />
+      </div>
+  );
+}
+
     const settings = {
+    centerMode: false,
     dots: true,
     arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />
+    prevArrow: <PrevArrow />,
+    nextArrow: <PrevArrow />
   };
   return (
     <div class="container">
@@ -64,17 +100,17 @@ function SimpleSlider() {
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       <h2> Single Item</h2>
       <SlideContainer>
-      <Slider {...settings}>
-        <div>
-          <img src='http://placekitten.com/g/400/202' />
-        </div>
-        <div>
-          <img src='http://placekitten.com/g/400/201' />
-        </div>
-        <div>
-          <img src='http://placekitten.com/g/400/203' />
-        </div>
-      </Slider>
+        <Slider {...settings}>
+          <div>
+            <img src='http://placekitten.com/g/400/202' />
+          </div>
+          <div>
+            <img src='http://placekitten.com/g/400/201' />
+          </div>
+          <div>
+            <img src='http://placekitten.com/g/400/203' />
+          </div>
+        </Slider>
     </SlideContainer>
     </div>
    );

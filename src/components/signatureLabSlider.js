@@ -17,20 +17,22 @@ const fadeIn = keyframes`
 
 const SlideContainer = styled(Box)`
   overflow: visible;
-  margin: 20px 0;
+  padding-left: 0px;
+  position: absolute;
+  margin: 20px 180px;
   opacity: 0;
   transform: translateX(100vw);
   animation: ${fadeIn} 800ms ${easing.bezier} 1000ms forwards;
   width: 70%;
   min-height: 200px;
-  background: white;
+  background: black;
 `
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      style={{...style, display: "block", background: "red", marginRight: -20}}
       onClick={onClick}
     />
   );
@@ -41,14 +43,14 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", background: "green", marginLeft: -20}}
       onClick={onClick}
     />
   );
 }
 
 const settings = {
-  centerMode: true,
+  centerMode: false,
   dots: true,
   arrows: true,
   infinite: true,
@@ -71,13 +73,14 @@ const MainSlider = ({ children }) => (
 )
 
 // How to render 
-// <div>
-// <MainSlider> 
-//   <div> <p>Slide 1</p> </div>
-//   <div> <p>Slide 2</p> </div>
-//   <div> <p>Slide 3</p> </div>
-//   <div> <img src='http://placekitten.com/g/400/202' /> </div>
-// </MainSlider>  
-// </div>
+{/* <>
+<MainSlider> 
+   <div> <p> Let's go for a <FaBeer />? </p> </div>
+   <div> <p>Slide 2</p> </div>
+   <div> <p>Slide 3</p> </div>
+  <div> <img src='http://placekitten.com/g/400/202' /> </div>
+ </MainSlider>  
+</> */}
+
 
 export default MainSlider

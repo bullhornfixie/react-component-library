@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  padding: 0px 40px 40px 40px;
+  padding: 0px 40px 40px 120px;
   width: 400px;
   background: #419be0;
   }
@@ -29,12 +29,10 @@ p {
 }
 
 .slick-prev:before {
-  color: black !important;
-  background-color: #eee;
+  content: '' !important;
 }
 .slick-next:before {
-  color: black !important;
-  background-color: #eee;
+  content: '' !important;
 }
 
 
