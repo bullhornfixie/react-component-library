@@ -27,17 +27,6 @@ function SimpleSlider() {
     min-height: 200px;
     background: black;
   `
-
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
   
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
@@ -69,19 +58,16 @@ function SimpleSlider() {
             <p> next</p> 
         </div>
     );
-}
+   }
 
-const PrevArrow = (props) => {
-  const { className, onClick } = props
-  return (
-      <div 
-        className={className}
-        onClick={onClick}
-      >
-        <FaBeer size={30} color="#FFF" />
-      </div>
-  );
-}
+    const PrevArrow = (props) => {
+      const { className, onClick } = props
+      return (
+        <div className={className} onClick={onClick}>
+          <FaBeer size={30} color="#000" />
+        </div>
+       );
+      }
 
     const settings = {
     centerMode: false,
