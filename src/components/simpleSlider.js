@@ -28,37 +28,37 @@ function SimpleSlider() {
     background: black;
   `
   
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
+  // function SamplePrevArrow(props) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ ...style, display: "block", background: "green" }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // }
 
-  class LeftNavButton extends React.Component {
-    render() {
-      return <button {...this.props} style={{fontSize: "40px", display: 'block', right:"40px", zIndex:"15", height:"40px", width:"40px", opacity:"1", color:"white"}}>
-        <span>  <FaBeer /> </span>
-        </button>;
-     }
-  }
+  // class LeftNavButton extends React.Component {
+  //   render() {
+  //     return <button {...this.props} style={{fontSize: "40px", display: 'block', right:"40px", zIndex:"15", height:"40px", width:"40px", opacity:"1", color:"white"}}>
+  //       <span>  <FaBeer /> </span>
+  //       </button>;
+  //    }
+  // }
 
-  function RightNavButton(props) {
-    const {className, style, onClick} = props
-    return (
-        <div
-            className="slick-arrow"
-            style={{...style, display: 'block'}}
-            onClick={onClick}
-        >
-            <p> next</p> 
-        </div>
-    );
-   }
+  // function RightNavButton(props) {
+  //   const {className, style, onClick} = props
+  //   return (
+  //       <div
+  //           className="slick-arrow"
+  //           style={{...style, display: 'block'}}
+  //           onClick={onClick}
+  //       >
+  //           <p> next</p> 
+  //       </div>
+  //   );
+  //  }
 
     const PrevArrow = (props) => {
       const { className, onClick } = props

@@ -2,7 +2,7 @@ import { Box } from 'rebass'
 import styled, { keyframes } from 'styled-components'
 import Slider from 'react-slick'
 import { render } from '@testing-library/react'
-
+import { FaBeer } from 'react-icons/fa'
 
 const easing = {
   hover: 'all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s',
@@ -27,27 +27,14 @@ const SlideContainer = styled(Box)`
   min-height: 200px;
   background: black;
 `
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+const PrevArrow = (props) => {
+  const { className, onClick } = props
   return (
-    <div
-      className={className}
-      style={{...style, display: "block", background: "red", marginRight: -20}}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green", marginLeft: -20}}
-      onClick={onClick}
-    />
-  );
-}
+    <div className={className} onClick={onClick}>
+      <FaBeer size={30} color="#000" />
+    </div>
+   );
+  }
 
 const settings = {
   centerMode: false,
@@ -58,8 +45,8 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />
+  nextArrow: <PrevArrow />,
+  prevArrow: <PrevArrow />
 };
 
 const MainSlider = ({ children }) => (
@@ -72,15 +59,15 @@ const MainSlider = ({ children }) => (
     
 )
 
-// How to render 
-{/* <>
-<MainSlider> 
-   <div> <p> Let's go for a <FaBeer />? </p> </div>
-   <div> <p>Slide 2</p> </div>
-   <div> <p>Slide 3</p> </div>
-  <div> <img src='http://placekitten.com/g/400/202' /> </div>
- </MainSlider>  
-</> */}
+// // How to render 
+// <>
+// <MainSlider> 
+//    <div> <p> Let's go for a <FaBeer />? </p> </div>
+//    <div> <p>Slide 2</p> </div>
+//    <div> <p>Slide 3</p> </div>
+//   <div> <img src='http://placekitten.com/g/400/202' /> </div>
+//  </MainSlider>  
+// </> 
 
 
 export default MainSlider
