@@ -8,10 +8,11 @@ import SpreadOperatorExample2 from './components/usingSpreadOperator';
 import Checkbox from './components/checkbox-formik';
 import Conditional from './components/conditional-rendering';
 import RenderingArray from './components/pushingToArray'
+import FindingIndex from './components/findIndex'
 
 function App() {
   return (
-    <RenderingArray />
+    <FindingIndex />
   )
 }
 

@@ -2,21 +2,26 @@ import React from 'react';
 
 const renderingArray = () => {
 
-const data = [
-  { Animal: 'Alligator' },
-  { Animal: 'Bear' },
-  { Animal: 'Snake' },
-  { Animal: 'Bird' },
-]
+  const variable = "x"
 
-const newColumns = () => {
-  data.push({ Animal: "Dog"})
-}
+  const data = [
+    { Animal: 'Alligator' },
+    { Animal: 'Bear' },
+    { Animal: 'Snake' },
+    { Animal: 'Bird' },
+  ]
 
-newColumns()
+  const newColumns = () => {
+    if (variable === "x") {
+      data.splice(3, 0, {Animal: 'Dog'})
+    }
+  }
+  // data.splice(position, item)
 
-return data.map((items) => <li>{items.Animal}</li>)
+  newColumns()
+  // calling function within component 
 
+  return data.map((items) => <li>{items.Animal}</li>)
 }
 
 export default renderingArray
