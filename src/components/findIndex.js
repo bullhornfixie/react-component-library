@@ -1,5 +1,5 @@
 import React from 'react';
-import _findIndex from 'lodash/findIndex';
+import {findIndex} from 'lodash';
 
 // using ._findIndex with lodash instead of splice in vanilla JS
 
@@ -12,8 +12,7 @@ const FindingIndex = () => {
     { Animal: 'Bird' },
   ]
 
-const _ = require('lodash')
-console.log(_.findIndex(data, {Animal: 'Bird'}))
+console.log(findIndex(data, {Animal: 'Bird'}))
        
 return data.map((items) => <li>{items.Animal}</li>)
 }
