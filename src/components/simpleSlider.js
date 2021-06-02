@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import '../styling/simpleSlider.css';
+import '../styles/simpleSlider.css';
 import { Box } from 'rebass';
 import styled, { keyframes } from 'styled-components';
 import { FaBeer } from 'react-icons/fa'
