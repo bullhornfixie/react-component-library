@@ -10,4 +10,14 @@
   src: local('BrilliantCut'), url('./fonts/BrilliantCutProB7-Medium.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ObjectSans-Heavy';
+  font-weight: 400;
+  src: local('ObjectSans-Heavy'), url('./fonts/ObjectSans-Heavy.otf') format('opentype');
+}
 
+@font-face {
+  font-family: 'GoshaSans-Bold';
+  font-weight: 400;
+  src: local('GoshaSans-Bold'), url('./fonts/GoshaSans-Bold.otf') format('opentype');
+}

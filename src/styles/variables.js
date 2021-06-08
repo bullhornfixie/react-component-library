@@ -68,6 +68,8 @@ const font = {
     mono: 'Inconsolata, monospace',
     custom: 'Dollie',
     custom2: 'BrilliantCut',
+    custom3: 'ObjectSans-Heavy',
+    custom4: 'GoshaSans-Bold'
   },
   weight: {
     regular: 400,

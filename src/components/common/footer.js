@@ -5,9 +5,9 @@ const Footer = () => (
   <Box sx={{ position: 'relative' }}>
     <Flex py="30px" alignItems="left" justifyContent="space-around" bg={colors.snow}>
       <Text
-        fontFamily={font.family.custom2}
+        fontFamily={font.family.custom4}
         color={colors.black}
-        fontSize={sizes.sm}
+        fontSize={sizes.lg}
       >
         <a
           href="http://localhost:3000"
