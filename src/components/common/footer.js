@@ -1,11 +1,11 @@
 import { Flex, Box, Text } from 'rebass'
-import { font, colors, sizes } from 'styles/variables'
+import { font, colors, sizes } from '../../styles/variables'
 
 const Footer = () => (
   <Box sx={{ position: 'relative' }}>
     <Flex py="30px" alignItems="left" justifyContent="space-around" bg={colors.snow}>
       <Text
-        fontFamily={font.family.mono}
+        fontFamily={font.family.custom2}
         color={colors.black}
         fontSize={sizes.sm}
       >

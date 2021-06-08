@@ -10,10 +10,11 @@ import Conditional from './components/conditional-rendering';
 import RenderingArray from './components/pushingToArray'
 import FindingIndex from './components/findIndex'
 import RenderingLogoExample from './components/using-styled-components-logo'
+import Footer from './components/common/footer'
 
 function App() {
   return (
-    <RenderingLogoExample />
+    <Footer />
   )
 }
 

@@ -1,3 +1,5 @@
+import './font.css'
+
 const sizes = {
   xs: 12,
   sm: 14,
@@ -64,6 +66,8 @@ const font = {
     body: 'DM Sans, Arial, sans-serif',
     heading: 'DM Sans, Arial, sans-serif',
     mono: 'Inconsolata, monospace',
+    custom: 'Dollie',
+    custom2: 'BrilliantCut',
   },
   weight: {
     regular: 400,

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Dollie';
+  font-weight: 400;
+  src: local('Dollie'), url('./fonts/DollieScript.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BrilliantCut';
+  font-weight: 400;
+  src: local('BrilliantCut'), url('./fonts/BrilliantCutProB7-Medium.ttf') format('truetype');
+}
+
+
