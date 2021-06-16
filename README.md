@@ -11,7 +11,7 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ###
-[x] Cookies Banner /n
-[x] Simple Slider 
+[x] Cookies Banner <br>
+[x] Simple Slider <br>
 
 
