@@ -13,5 +13,6 @@ You will also see any lint errors in the console.
 ###
 [x] Cookies Banner <br>
 [x] Simple Slider <br>
+[x] Page Layout With Header And Footer <br>
 
 
