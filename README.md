@@ -15,4 +15,5 @@ You will also see any lint errors in the console.
 [x] Simple Slider <br>
 [x] Page Layout With Header And Footer <br>
 
-
+### Resource 
+- [Multiple OnClick Events](https://upmostly.com/tutorials/multiple-onclick-events-in-react-with-examples)
