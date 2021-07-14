@@ -1,16 +1,14 @@
 # React Custom Built Component Library 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A library of React components I have developed from various projects. 
 
-### `npm start`
+### Getting Started 
 
-Runs the app in the development mode.\
+`npm i` 
+`npm start`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-###
+### Components 
 [x] Cookies Banner <br>
 [x] Simple Slider <br>
 [x] Page Layout With Header And Footer <br>
