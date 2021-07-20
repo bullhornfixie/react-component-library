@@ -13,7 +13,7 @@ import { Asset } from 'expo-asset'
 import styled from 'styled-components'
 import { useFonts } from '@use-expo/font'
 import { Ionicons } from '@expo/vector-icons'
-import { sizes, colors, textStyles } from '../styles/variables'
+import { sizes, colors, textStyles } from '../../styles/variables'
 import client from '../services/contentful'
 
 // Fonts
