@@ -20,7 +20,7 @@ const content = (
     <>
     
     <Text my={spacing.base}>{block.fields.title}</Text>
-    <ReactMarkdown fontSize="20px">{block.fields.description}</ReactMarkdown>
+    <Text><ReactMarkdown>{block.fields.description}</ReactMarkdown></Text>
     </>
     )
   )
