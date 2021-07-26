@@ -9,3 +9,4 @@ const circleLogo = logos.map(logo => (
     />
   )
 )
+
