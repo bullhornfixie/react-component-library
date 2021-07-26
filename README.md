@@ -11,7 +11,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### Components 
 [x] Cookies Banner <br>
 [x] Simple Slider <br>
-[x] Page Layout With Header And Footer <br>
+[x] Footer With 3 Sections <br>
+
+### Styling 
+[x] FlexBox with linear gradient background <br>
+
+### Shapes 
+[x] Horizontal line <br>
+[x] Circle <br> 
 
 ### Resource 
-- [Multiple OnClick Events](https://upmostly.com/tutorials/multiple-onclick-events-in-react-with-examples)
+- [Multiple OnClick Events](https://upmostly.com/tutorials/multiple-onclick-events-in-react-with-examples) <br>
+- [CSS Gradient](https://cssgradient.io/) <br>
+
