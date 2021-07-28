@@ -10,8 +10,6 @@ const Layout = ({children}) => (
     </Flex>
   <Footer />
   </>
-
-
 )
 
 export default Layout

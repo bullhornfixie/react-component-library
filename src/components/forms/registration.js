@@ -1,17 +1,22 @@
 import Layout from '@common/layout'
 import { Text, Flex, Box } from 'rebass'
-import { contentfulClient } from '@services/contentful'
 import BlockWrapper from '@components/blocks/blockWrapper'
 import { colors, font, layout, sizes, spacing } from '@styles/variables'
-import ReactMarkdown from 'react-markdown'
 import Line from '@common/line'
-import isEmpty from 'lodash/isEmpty'
 import styled from 'styled-components'
+import Btn from '@common/button'
+
+
+// may need at later stage
+import Link from 'next/link'
+import isEmpty from 'lodash/isEmpty'
+import ReactMarkdown from 'react-markdown'
+import { contentfulClient } from '@services/contentful'
 
 const Wrapper = styled(Box)`
   background-color: ${colors.pvLightgrey};
   width: 50%;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-left: 10vh;
   padding-right: 10vh;
 `
@@ -19,7 +24,6 @@ const Wrapper = styled(Box)`
 const Title = styled(Text)`
   color: ${colors.pvBlue};
   margin-bottom: 5px;
-
 `
 
 const TextBox = styled(Box)`
@@ -28,6 +32,15 @@ const TextBox = styled(Box)`
   border: 1px solid; 
   border-color: ${colors.pvBlue};
   border-radius: 10px; 
+`
+
+const TickBox = styled(Box)`
+  background-color: ${colors.white};
+  height: 18px;
+  width: 20px;
+  border: 1px solid; 
+  border-color: ${colors.pvBlue};
+  border-radius: 5px; 
 `
 
 const Registration = () => {
@@ -58,7 +71,6 @@ const Registration = () => {
             my='10vh'
             py='10vh'
             height='auto'
-            justifyContent='center'
             bg={colors.white}
             sx={{borderRadius: '40px'}}
           >
@@ -66,12 +78,26 @@ const Registration = () => {
             <Wrapper><Title mb='5px'>Last name</Title><TextBox /></Wrapper>
             <Wrapper><Title mb='5px'>Email address</Title><TextBox /></Wrapper>
             <Wrapper><Title mb='5px'>Telephone number</Title><TextBox /></Wrapper>
+
             <Wrapper width='100%'>
               <Title mb='5px'>Tell us about yourself</Title>
               <TextBox height='20vh'/>
             </Wrapper>
 
-          </Flex>
+            <Flex width='100%'> 
+              <TickBox marginLeft='10vh'/>
+              <Title pl='10px'>I agree to the <a className='formLink' href='/terms'>terms and conditions</a></Title>
+            </Flex>
+    
+            <Wrapper width='40vh' pt={spacing.md} mb='-5vh'> 
+              <Btn variant='light' fontSize='small'>
+                <Link href='/registration'>
+                  <a>Register</a>
+                </Link>
+              </Btn>
+            </Wrapper>
+              
+         </Flex>   
         </BlockWrapper>
       </Layout>
     </>
