@@ -1,7 +1,7 @@
 import { contentfulClient } from '@services/contentful'
 
-// const [loaded, setLoaded] = useState(false)
-//   const [content, setContent] = useState([])
+//     const [loaded, setLoaded] = useState(false)
+//     const [content, setContent] = useState([])
 
 //   const fetchData = async () => {
 //     const entriesObj = {
@@ -20,3 +20,6 @@ import { contentfulClient } from '@services/contentful'
 //   useEffect(() => {
 //     fetchData()
 //   }, [])
+
+
+
